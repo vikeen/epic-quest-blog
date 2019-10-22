@@ -1,0 +1,14 @@
+# Documentation Reference
+# https://www.saltycrane.com/blog/2019/01/how-run-postgresql-docker-mac-local-development/
+#
+version: "3"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "postgres"
+    ports:
+      - "5432:5432"
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+volumes:
+  my_dbdata:

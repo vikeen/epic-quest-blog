@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1. Start backing apps `docker-compose up -d`
+1. Install ruby gems `bundle install` 
+1. Install npm packages `yarn install`
+1. Create databases
+    1. Development `docker exec -it postgres psql -U postgres -c "create database johnmrake_development"`
+    1. Test `docker exec -it my_postgres psql -U postgres -c "create database johnmrake_test"`
+1. Migrate database `rails db:migrate`
+1. Start rails `rails s`
 
-* Ruby version
+## Misc Database Commands
 
-* System dependencies
+logs - `docker logs -f postgres`
+psql - `docker exec -it postgres psql -U postgres`
 
-* Configuration
+## Tests
 
-* Database creation
+`rake test`
 
-* Database initialization
+## Deployment instructions
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TODO
