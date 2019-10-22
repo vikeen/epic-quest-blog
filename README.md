@@ -2,23 +2,13 @@
 
 ## Setup
 
-1. Start backing apps `docker-compose up -d`
-1. Install ruby gems `bundle install` 
-1. Install npm packages `yarn install`
-1. Create databases
-    1. Development `docker exec -it postgres psql -U postgres -c "create database johnmrake_development"`
-    1. Test `docker exec -it my_postgres psql -U postgres -c "create database johnmrake_test"`
-1. Migrate database `rails db:migrate`
-1. Start rails `rails s`
-
-## Misc Database Commands
-
-logs - `docker logs -f postgres`
-psql - `docker exec -it postgres psql -U postgres`
+1. Start backing apps `docker-compose up`
+1. Create databases `docker-compose run web rake db:setup`
+1. Migrate databases `docker-compose run web rake db:migrate`
 
 ## Tests
 
-`rake test`
+Run tests `docker-compose run web rake test`
 
 ## Deployment instructions
 
