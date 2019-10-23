@@ -60,7 +60,9 @@
                               <a class="home-btn" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
                           </li>
                           <li class="tab"><a href="#resume">RESUME</a></li>
-                          <li class="tab"><a href="#portfolio">PORTFOLIO</a></li>
+                          <li class="tab">
+                            <%= link_to 'PORTFOLIO', portfolio_url %>
+                          </li>
                           <li class="tab">
                             <%= link_to 'BLOG', controller: 'articles' %>
                           </li>
