@@ -7,3 +7,4 @@
 //= link owl.carousel.css
 //= link reset.css
 //= link mat-vcard.theme.css
+//= link colors/blue.css

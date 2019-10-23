@@ -5,12 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'owl.theme', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'owl.carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'mat-vcard.theme', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'colors/blue', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -62,7 +63,9 @@
                           <li class="tab">
                             <%= link_to 'BLOG', controller: 'articles' %>
                           </li>
-                          <li class="tab"><a href="#contact">CONTACT</a></li>
+                          <li class="tab">
+                            <%= link_to 'CONTACT', contact_url %>
+                          </li>
                       </ul>
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-8 dynamic">
