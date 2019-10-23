@@ -20,4 +20,4 @@ test:
 
 production:
   <<: *default
-  database: johnmrake_production
+  url: <%= ENV['DATABASE_URL'] %>
