@@ -57,7 +57,12 @@
                   <div class="col-md-8 col-sm-8 col-xs-4">
                       <ul class="tabs">
                           <li class="tab">
-                              <a class="home-btn" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                            <%= link_to home_url, class: "home-btn" do %>
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            <% end %>
+                          </li>
+                          <li class="tab">
+                            <%= active_link_to 'RESUME', resume_url %>
                           </li>
                           <li class="tab">
                             <%= link_to 'RESUME', resume_url %>
