@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'contact', to: 'contact#index'
+  get 'resume', to: 'resume#index'
   get 'portfolio', to: 'portfolio#index'
 
   resources :articles do
