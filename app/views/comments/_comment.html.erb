@@ -1,15 +1,17 @@
-<p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-</p>
-
-<p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-</p>
-
-<p>
-    <%= link_to 'Destroy Comment', [comment.article, comment],
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="row">
+    <div class="col-md-2 col-sm-2 col-xs-3 person-img">
+        <img src="../images/person.jpg" alt="">
+    </div>
+    <div class="col-md-10 col-sm-10 col-xs-9 comment-content">
+        <div class="name">
+            <%= comment.commenter %>
+        </div> 
+        <span class="date">
+            <%= comment.created_at.strftime('%b %e, %Y') %>
+        </span>
+        <p>
+            <%= comment.body %>
+        </p>
+        <a href="#"><i class="fa fa-reply" aria-hidden="true"></i>Reply</a>
+    </div>
+</div>

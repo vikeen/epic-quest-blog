@@ -1,19 +1,75 @@
-<p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-</p>
+<div id="blog-post">
+    <div class="row">
+        <div class="col-md-8 post">
+            <div class="blog-image">
+                <img src="../images/blogs/blog-1.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <h1 class="blog-title bottom_30 top_30">
+                    <%= @article.title %>
+                </h1>
+                <%= @article.text %>
+            </div>
+            <div class="post-comment">
+                <div class="section-title bottom_30 top_60"><span></span><h2>Post Comments</h2></div>
+                <ul>
+                    <% @article.comments.each do |comment| %>
+                        <li>
+                            <%= render comment, comment: comment  %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <%= render 'comments/form' %>
+        </div>
+        <div class="col-md-4 blog-sidebar">
+            <!-- Category List -->
+            <div class="category">
+                <div class="section-title bottom_15 top_15"><span></span><h3>Categories</h3></div>
+                <ul class="category-list">
+                    <li><a href="#">Web design</a><span>11</span></li>
+                    <li><a href="#">Development</a><span>12</span></li>
+                    <li><a href="#">Photography</a><span>16</span></li>
+                    <li><a href="#">Branding</a><span>16</span></li>
+                    <li><a href="#">Other</a><span>16</span></li>
+                </ul>
+            </div>
+            <!-- Popular Post -->
+            <div class="post-list">
+                <div class="section-title bottom_15 top_60"><span></span><h3>Related Posts</h3></div>
+                <ul>
+                    <!-- a post -->
+                    <li>
+                        <a href="#">
+                            <div class="info">Development <span>Oct 21, 17</span></div>
+                            <p class="little-text">How to vertically center a div for all browsers?</p>
+                        </a>
+                    </li>
+                    <!-- a post -->
+                    <li>
+                        <a href="#">
+                            <div class="info">Web Design <span>April 14, 17</span></div>
+                            <p class="little-text">How to convert a Sketch design file into a layered Photoshop file</p>
+                        </a>
+                    </li>
+                    <!-- a post -->
+                    <li>
+                        <a href="#">
+                            <div class="info">Web Design <span>Mar 18, 17</span></div>
+                            <p class="little-text">The Bookmarkable Photoshop Tutorial for Beginners</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Advertisement -->
+            <div class="advertisement">
+                <div class="section-title bottom_30 top_60"><span></span><h3>Advertisement</h3></div>
 
-<p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-</p>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+                <img src="../images/image.jpg" alt="">    
+            </div>
+        </div> 
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_article_path(@article) %>
 <%= link_to 'Back', articles_path %>
