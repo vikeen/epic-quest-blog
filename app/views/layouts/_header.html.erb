@@ -10,19 +10,16 @@
                     <% end %>
                     </li>
                     <li class="tab">
-                    <%= active_link_to 'RESUME', resume_url %>
+                        <%= active_link_to 'RESUME', resume_path %>
                     </li>
                     <li class="tab">
-                    <%= link_to 'RESUME', resume_url %>
+                        <%= active_link_to 'PORTFOLIO', portfolio_path %>
                     </li>
                     <li class="tab">
-                    <%= link_to 'PORTFOLIO', portfolio_url %>
+                        <%= active_link_to 'BLOG', articles_path %>
                     </li>
                     <li class="tab">
-                    <%= link_to 'BLOG', controller: 'articles' %>
-                    </li>
-                    <li class="tab">
-                    <%= link_to 'CONTACT', contact_url %>
+                        <%= active_link_to 'CONTACT', contact_path %>
                     </li>
                 </ul>
             </div>
