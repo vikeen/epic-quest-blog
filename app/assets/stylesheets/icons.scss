@@ -1,0 +1,29 @@
+// Place all the styles related to the Icons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$icon-box-size: 100px;
+
+#icons {
+    .icon-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .icon-box {
+        flex: 1;
+        min-width: $icon-box-size;
+        height: $icon-box-size;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .icon-label {
+        text-align: center;
+    }
+
+    .icon i::before {
+        font-size: 44px;
+        margin-left: 0;
+    }
+}
