@@ -1,24 +1,23 @@
 <div id="contact">
     <div class="row">
-        <!-- Contact Form -->
         <section class="contact-form col-md-6 padding_30 padbot_45">
             <div class="section-title top_15 bottom_30"><span></span><h2>Contact Form</h2></div>
-            <form class="site-form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <input class="site-input" placeholder="Name">
-                    </div>
-                    <div class="col-md-6">
-                        <input class="site-input" placeholder="E-mail">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="site-area" placeholder="Message"></textarea>
-                    </div>
-                    <div class="col-md-12 top_15 bottom_30">
-                        <button class="site-btn" type="submit">Submit</button>
-                    </div>
+
+            <% if @message_sent %>
+                <div class="alert alert-success" role="alert">
+                    <b>Hey, thanks for getting in touch!</b><br/>
+
+                    <p>I'll respond as soon as I can (usually within a day).</p>
+                    <p>
+                        Email is definitely the best way to reach me, but you're welcome to message me through any of the contact information to the right.
+                    </p>
+                    <p>
+                        <i>Connect with me on <a href="https://www.linkedin.com/in/john-rake/">LinkedIn</a> as well. It's a great way to stay in touch down the road and share our projects.</i>
+                    </p>
                 </div>
-            </form>  
+            <% else %> 
+                <%= render "contact/form" %>
+            <% end %>
         </section>
         <!-- Contact Informations -->
         <section class="contact-info col-md-6 padding_30 padbot_45">
@@ -41,3 +40,4 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99366.31324092453!2d-94.89107507034397!3d38.89660352943801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c097a5101f4f41%3A0xc18238569d7e7db0!2sOlathe%2C%20KS!5e0!3m2!1sen!2sus!4v1571800519274!5m2!1sen!2sus" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </section>
     </div>
+</div>

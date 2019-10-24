@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'contact', to: 'contact#index'
+  post 'contact/send', to: 'contact#send_email'
   get 'resume', to: 'resume#index'
   get 'portfolio', to: 'portfolio#index'
 
