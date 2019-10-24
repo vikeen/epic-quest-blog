@@ -5,15 +5,24 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Vendor
+    ================================================== --> 
     <%= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'flaticon', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'owl.theme', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'owl.carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'mat-vcard.theme', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'colors/blue', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'cubeportfolio.min', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <!-- Google Web fonts
+    ================================================== --> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+
+    <!-- Application
+    ================================================== --> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
