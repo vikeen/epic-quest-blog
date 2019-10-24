@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'home', to: 'welcome#index'
   get 'contact', to: 'contact#index'
   get 'resume', to: 'resume#index'
   get 'portfolio', to: 'portfolio#index'
