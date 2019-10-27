@@ -12,7 +12,7 @@
                         Email is definitely the best way to reach me, but you're welcome to message me through any of the contact information to the right.
                     </p>
                     <p>
-                        <i>Connect with me on <a href="https://www.linkedin.com/in/john-rake/">LinkedIn</a> as well. It's a great way to stay in touch down the road and share our projects.</i>
+                        <i>Connect with me on <a href="<% linkedin_url %>" target="_blank">LinkedIn</a> as well. It's a great way to stay in touch down the road and share our projects.</i>
                     </p>
                 </div>
             <% else %> 
@@ -28,8 +28,12 @@
                 <li><span>E-mail:</span> john.rake12@gmail.com</li>
                 <li>
                     <div class="social-icons top_15"> 
-                        <a class="fb" href="https://www.facebook.com/john.rake.37"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
-                        <a class="li" href="https://www.linkedin.com/in/john-rake/"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                        <a class="fb" href="<%= facebook_url %>" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a> 
+                        <a class="li" href="<%= linkedin_url %>" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a> 
                     </div>
                 </li>
             </ul>
