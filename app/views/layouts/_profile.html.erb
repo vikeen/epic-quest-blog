@@ -1,7 +1,7 @@
 <div class="profile">
     <div class="profile-name">
-        <span class="name">John Rake</span><br>
-        <span class="job">Web Developer</span>
+        <span class="name"><%= my_full_name %></span><br>
+        <span class="job"><%= my_job_title %></span>
     </div>
 
     <figure class="profile-image">
@@ -9,9 +9,9 @@
     </figure> 
     <ul class="profile-information">
         <li></li>
-        <li><p><span>Name:</span> John Rake</p></li>
-        <li><p><span>Job:</span> Freelancer</p></li>
-        <li><p><span>Email:</span> john.rake12@gmail.com</p></li>
+        <li><p><span>Name:</span> <%= my_full_name %></p></li>
+        <li><p><span>Job:</span> <%= my_job_title %></p></li>
+        <li><p><span>Email:</span> <%= my_email %></p></li>
     </ul>
     <div class="profile-hire-me">
         <%= render 'layouts/hire_me_button' %>
