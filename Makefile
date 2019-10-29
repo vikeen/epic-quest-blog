@@ -1,20 +1,38 @@
-start: ## start the application
+#phony dependency task that does nothing
+phony:
+
+## start the application
+start: phony
 	docker-compose up
 
-stop: ## stop the application
+## stop the application
+stop: phony
 	docker-compose down
 
-test: ## run application test stack
+## build the docker contaienrs
+build: phony
+	docker-compose build
+
+## run application test suite
+test: phony
 	docker-compose run web rake test
 
-db-setup: ## setup the database
+## setup the database
+db-setup: phony
 	docker-compose run web rake db:setup
 
-db-migrate: ## run any database migrations
+## run any database migrations
+db-migrate: phony
 	docker-compose run web rake db:migrate
 
-bundle: ## update ruby bundle within docker
+## reset the database and migrate
+db-reset: phony
+	docker-compose run web rake db:drop db:create db:migrate
+
+## update ruby bundle within docker
+bundle: phony
 	docker-compose run web bundle
 
-routes: ## list all application routes
+## list all application routes
+routes: phony
 	docker-compose run web rails routes
