@@ -6,6 +6,8 @@ class Article < ApplicationRecord
     validates :title, presence: true,
                       length: { minimum: 5 }
 
+    validates :text, presence: true
+
     rails_admin do
         list do 
             field :title
