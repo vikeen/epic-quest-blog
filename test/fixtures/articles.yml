@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  text: MyText
+web_dev:
+  title: Web Development Article
+  text: This is an article about web development. Make it rain code all day!
 
-two:
-  title: MyString
-  text: MyText
+web_design:
+  title: Create Consistent, Beautiful User Experiences
+  text: This is an article about web design and how it creates awesome product's your customers will love!
+
+mobile_app:
+  title: React Native vs. Flutter
+  text: This is an article about mobile app development. Native or Hybrid - That is the question!
