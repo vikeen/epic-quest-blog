@@ -5,4 +5,18 @@ class Article < ApplicationRecord
     
     validates :title, presence: true,
                       length: { minimum: 5 }
+
+    rails_admin do
+        list do 
+            field :title
+            field :text
+            field :tags
+            field :created_at
+            field :updated_at
+        end  
+
+        configure :article_tags do
+            label 'Tags'
+        end
+    end
 end
