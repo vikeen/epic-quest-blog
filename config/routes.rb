@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'portfolio#index'
 
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
 
   # development only routes

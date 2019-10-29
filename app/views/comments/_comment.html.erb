@@ -4,13 +4,13 @@
     </div>
     <div class="comment-content">
         <div class="name">
-            <%= comment.commenter %>
+            <%= comment.name %>
         </div> 
         <span class="date">
             <%= comment.created_at.strftime('%b %e, %Y') %>
         </span>
         <p>
-            <%= comment.body %>
+            <%= comment.text %>
         </p>
         <a href="#"><i class="fa fa-reply" aria-hidden="true"></i>Reply</a>
     </div>

@@ -3,13 +3,13 @@
     <%= form_with(model: [ @article, @article.comments.build ], local: true, class: 'site-form') do |form| %>
         <div class="row">
             <div class="col-md-6">
-              <%= text_field_tag :commenter, nil, class: "site-input", placeholder: "Name", required: true %>
+              <%= text_field_tag :name, nil, class: "site-input", placeholder: "Name", required: true %>
             </div>
             <div class="col-md-6">
               <%= text_field_tag :email, nil, class: "site-input", placeholder: "E-mail", required: true %>
             </div>
             <div class="col-md-12">
-                <%= text_area_tag :body, nil, class: "site-area", placeholder: "Message", required: true %>
+                <%= text_area_tag :text, nil, class: "site-area", placeholder: "Message", required: true %>
             </div>
             <div class="col-md-12 top_15 bottom_30">
               <%= submit_tag "Submit", class: "site-btn", type: "Submit" %>

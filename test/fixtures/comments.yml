@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  commenter: MyString
-  body: 
-  article: one
+  name: Bob Yukon
+  text: Great post, man. Keep up the good work! 
+  article: web_dev
 
 two:
-  commenter: MyString
-  body: 
-  article: two
+  name: Jerome Whitehat
+  text: Not bad, but I think you can do better. Have you tried using product design sprints?
+  article: web_design
