@@ -27,7 +27,11 @@ db-migrate: phony
 
 ## reset the database and migrate
 db-reset: phony
-	docker-compose run web rake db:drop db:create db:migrate
+	docker-compose run web rake db:drop db:create db:migrate db:seed
+
+## seed the database with fake development data
+db-seed: phony
+	docker-compose run web rails db:seed
 
 ## update ruby bundle within docker
 bundle: phony
