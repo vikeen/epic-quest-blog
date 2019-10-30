@@ -3,40 +3,33 @@ phony:
 
 ## start the application
 start: phony
-	docker-compose up
+	rails s
 
-## stop the application
-stop: phony
-	docker-compose down
-
-## build the docker contaienrs
-build: phony
-	docker-compose build
+## install deps
+install: phony
+	bundle install
+	yarn install
 
 ## run application test suite
 test: phony
-	docker-compose run web rake test
+	rake test
 
 ## setup the database
 db-setup: phony
-	docker-compose run web rake db:setup
+	rake db:setup
 
 ## run any database migrations
 db-migrate: phony
-	docker-compose run web rake db:migrate
+	rake db:migrate
 
 ## reset the database and migrate
 db-reset: phony
-	docker-compose run web rake db:drop db:create db:migrate db:seed
+	rake db:drop db:create db:migrate db:seed
 
 ## seed the database with fake development data
 db-seed: phony
-	docker-compose run web rails db:seed
-
-## update ruby bundle within docker
-bundle: phony
-	docker-compose run web bundle
+	rails db:seed
 
 ## list all application routes
 routes: phony
-	docker-compose run web rails routes
+	rails routes
