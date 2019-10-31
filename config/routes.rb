@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'contact', to: 'contact#index'
   post 'contact/send', to: 'contact#send_email'
