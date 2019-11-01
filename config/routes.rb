@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'my_playbook/index'
   get 'work_with_me/index'
   get 'about/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
