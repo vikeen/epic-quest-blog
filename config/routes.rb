@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'services', to: 'services#index'
+  get 'services/web-development', to: 'services#web_development'
+  get 'services/ruby-on-rails', to: 'services#ruby_on_rails'
+  get 'services/wordpress', to: 'services#wordpress'
+  get 'services/mobile-apps', to: 'services#mobile_apps'
+  get 'services/react-native', to: 'services#react_native'
+  get 'services/firebase', to: 'services#firebase'
+
   get 'playbook', to: 'playbook#index'
   get 'playbook/startup', to: 'playbook#startup'
   get 'playbook/test-driven-development', to: 'playbook#test_driven_development'
