@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   end
 
   # development only routes
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.test?
     get 'icons', to: 'icons#index'
   end
   

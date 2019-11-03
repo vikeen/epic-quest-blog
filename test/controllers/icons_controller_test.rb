@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class IconsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    get icons_url
+    assert_response :success
+    assert_select "title", "Icons"
+  end
 end

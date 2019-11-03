@@ -1,2 +1,13 @@
+<% content_for :title, "Playbook" %>
 <h1>Playbook#index</h1>
 <p>Find me in app/views/playbook/index.html.erb</p>
+
+<ul>
+    <li><%= link_to 'Startups', playbook_startup_path %>
+    <li><%= link_to 'Build, Measure, Learn', playbook_build_measure_learn_path %>
+    <li><%= link_to 'Lean Project Management', playbook_lean_project_management_path %>
+    <li><%= link_to 'Weekly Iterations', playbook_weekly_iterations_path %>
+    <li><%= link_to 'Test Driven Development', playbook_test_driven_development_path %>
+    <li><%= link_to 'Communication', playbook_communication_path %>
+    <li><%= link_to 'Pricing', playbook_pricing_path %>
+</ul>
